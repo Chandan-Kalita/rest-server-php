@@ -6,14 +6,16 @@ require_once "app.php";
 define("BASE_URL",'\/rest-server');
 
 $routes = [
-    "POST"=>[],
-    "GET"=>[
+    "POST"=>[
         "demo"=>[
-            'functional_params'=>['getQueries'],
+            'functional_params'=>['getBody'],
             'guards' => ['isAuthorized'],
             'controller_name'=>'demo',
             'handler' => 'handleDemo'
         ],
+    ],
+    "GET"=>[
+        
         "demo/profile"=> [
             'controller_name'=>'profile',
             'handler'=>"handleProfile"

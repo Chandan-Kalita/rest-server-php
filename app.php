@@ -27,7 +27,8 @@ $request_path = getRequestedPath($request_uri);
                 array_push($param_arr,$res);
             }
         }
-            $handlers['handler'](...$param_arr);
+            $response = $handlers['handler'](...$param_arr);
+            echo json_encode($response);
             die();
         }
     }

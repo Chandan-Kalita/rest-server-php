@@ -1,5 +1,4 @@
 <?php
-function handleDemo($get){
-    echo '<pre>';
-    print_r($get);
+function handleDemo($post){
+    return $post;
 }
